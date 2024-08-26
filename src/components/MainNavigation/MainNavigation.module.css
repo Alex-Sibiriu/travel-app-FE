@@ -1,0 +1,16 @@
+header a {
+  color: #FED7AA;
+  text-transform: capitalize;
+  height: 100%;
+  display: inline-block;
+  align-content: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  transition: all .3s;
+}
+
+header a:hover,
+header a.active {
+  color: #FFF;
+  font-size: 1.4rem;
+}

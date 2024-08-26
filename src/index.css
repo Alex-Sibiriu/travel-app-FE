@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "@fontsource/merriweather"; /* Peso normale, variante normale */
+@import "@fontsource/merriweather/700.css"; /* Peso bold */
+@import "@fontsource/lato"; /* Peso normale, variante normale */
+@import "@fontsource/lato/700.css"; /* Peso bold */
+
+
+* {
+  font-family: 'Lato', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Merriweather', serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+@keyframes bounce {
+  0%  {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+p:hover .bounce {
+  animation: bounce 1.5s ease infinite;
+}
+
+.my-bg {
+  background-image: url('../public/asset/background.png');
+  background-size: contain;
+}
+
+.bg-error {
+  background-image: url('../public/asset/bg-error.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.txt-shadow {
+  text-shadow: 3px 3px 2px #333;
+}
+
+main {
+  height: calc(100vh - 64px);
+}
+
+.error-text {
+  text-shadow: 1px 1px 1px  #b53b0a, 
+              -1px -1px 1px  white;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #f97316; 
+  border-radius: 10px; 
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+
+@media screen and (min-width: 600px) {
+  .error-text {
+    text-shadow: 2px 2px 2px  #b53b0a, 
+                -1px -1px 1px  white;
+  }
+}
+

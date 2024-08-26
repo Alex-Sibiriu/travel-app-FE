@@ -1,0 +1,46 @@
+.isVisited {
+  padding-bottom: 16px;
+}
+
+.isVisited input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+.isVisited label {
+	cursor: pointer;
+  margin-top: 10px;
+	text-indent: -9999px;
+	width: 60px;
+	height: 30px;
+	background: grey;
+	display: block;
+	border-radius: 100px;
+	position: relative;
+}
+
+.isVisited label:after {
+	content: '';
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	border-radius: 20px;
+	transition: 0.3s;
+}
+
+.isVisited input:checked + label {
+	background: #bada55;
+}
+
+.isVisited input:checked + label:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+
+.isVisited label:active:after {
+	width: 30px;
+}
