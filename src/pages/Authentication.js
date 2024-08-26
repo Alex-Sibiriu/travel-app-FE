@@ -50,7 +50,7 @@ export async function action({ request }) {
 	const mode = searchParams.get("mode") || "login";
 
 	if (mode !== "login" && mode !== "register") {
-		throw json({ message: "Modalità non supportate" }, { status: 422 });
+		return redirect("/auth?mode=login&message=modalità non supportata");
 	}
 
 	const data = await request.formData();
@@ -79,9 +79,6 @@ export async function action({ request }) {
 	} catch (error) {
 		console.log(error.message);
 
-		throw json(
-			{ message: "Impossibile eseguire l'operazione" },
-			{ status: error.response?.status || 500 }
-		);
+		return redirect(`/auth?mode=login&message=${error.message}`);
 	}
 }

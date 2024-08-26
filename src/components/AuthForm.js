@@ -18,9 +18,7 @@ export default function AuthForm() {
 				</h2>
 
 				{SessionExpired && (
-					<h3 className="py-4 text-red-800">
-						Sessione scaduta, effettua nuovamente l'accesso!
-					</h3>
+					<h3 className="py-4 text-red-800">{SessionExpired}</h3>
 				)}
 
 				{!isLogin && (

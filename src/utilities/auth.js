@@ -36,7 +36,7 @@ export function checkAuthLoader() {
 		localStorage.removeItem("token");
 		localStorage.removeItem("expiration");
 		localStorage.removeItem("user");
-		return redirect("/auth?mode=login&message=sessione-expired");
+		return redirect("/auth?mode=login&message=session%20expired");
 	}
 
 	return null;

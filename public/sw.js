@@ -20,12 +20,12 @@ this.addEventListener("install", (event) => {
 });
 
 this.addEventListener("fetch", (event) => {
-	console.log("Fetching:", event.request.url);
+	// console.log("Fetching:", event.request.url);
 
 	event.respondWith(
 		caches.match(event.request).then((response) => {
 			if (response) {
-				console.log("Serving from cache:", event.request.url);
+				// console.log("Serving from cache:", event.request.url);
 				return response;
 			}
 
@@ -41,7 +41,7 @@ this.addEventListener("fetch", (event) => {
 
 					const responseToCache = networkResponse.clone();
 					caches.open(CACHE_NAME).then((cache) => {
-						console.log("Caching new resource:", event.request.url);
+						// console.log("Caching new resource:", event.request.url);
 						cache.put(event.request, responseToCache);
 					});
 
@@ -53,39 +53,6 @@ this.addEventListener("fetch", (event) => {
 		})
 	);
 });
-
-// this.addEventListener("fetch", (event) => {
-// 	event.respondWith(
-// 		caches.match(event.request).then((response) => {
-// 			// Se la risorsa è nella cache, restituirla
-// 			if (response) {
-// 				return response;
-// 			}
-
-// 			// Altrimenti, fetch dalla rete e aggiungere alla cache dinamicamente
-// 			return fetch(event.request).then((networkResponse) => {
-// 				// Controlla che la richiesta sia valida
-// 				if (
-// 					!networkResponse ||
-// 					networkResponse.status !== 200 ||
-// 					networkResponse.type !== "basic"
-// 				) {
-// 					return networkResponse;
-// 				}
-
-// 				// Clona la risposta per poterla inserire nella cache
-// 				const responseToCache = networkResponse.clone();
-
-// 				// Aggiunge dinamicamente la risposta alla cache
-// 				caches.open(CACHE_NAME).then((cache) => {
-// 					cache.put(event.request, responseToCache);
-// 				});
-
-// 				return networkResponse;
-// 			});
-// 		})
-// 	);
-// });
 
 this.addEventListener("activate", (event) => {
 	const cacheWhitelist = [CACHE_NAME];

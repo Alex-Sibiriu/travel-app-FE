@@ -53,7 +53,6 @@ async function loadTravels() {
 		localStorage.setItem("travels", JSON.stringify(resData));
 		return resData;
 	} catch (error) {
-		console.log("ERROREEEEEEEEE", error);
 		if (error.code === "ERR_NETWORK") {
 			const localTravels = JSON.parse(localStorage.getItem("travels")) || [];
 			return localTravels;
