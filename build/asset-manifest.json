@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b43f3cad.css",
+    "main.js": "/static/js/main.842e573b.js",
+    "static/media/bg-error.jpg": "/static/media/bg-error.575f778fa5991c949daf.jpg",
+    "static/media/background.png": "/static/media/background.5ae9b02f3ce6abbbe94e.png",
+    "static/media/lato-latin-400-normal.woff2": "/static/media/lato-latin-400-normal.be36596da218e1eec01c.woff2",
+    "static/media/lato-latin-700-normal.woff2": "/static/media/lato-latin-700-normal.8f28e0e1fdb195149f1c.woff2",
+    "static/media/merriweather-latin-400-normal.woff2": "/static/media/merriweather-latin-400-normal.e009f21405b4d7e89367.woff2",
+    "static/media/merriweather-cyrillic-ext-400-normal.woff2": "/static/media/merriweather-cyrillic-ext-400-normal.2a880e22b1b888ab5465.woff2",
+    "static/media/merriweather-latin-700-normal.woff2": "/static/media/merriweather-latin-700-normal.2071db10c6abae42e047.woff2",
+    "static/media/merriweather-latin-ext-400-normal.woff2": "/static/media/merriweather-latin-ext-400-normal.4657f5ab02d5923d223f.woff2",
+    "static/media/merriweather-cyrillic-ext-700-normal.woff2": "/static/media/merriweather-cyrillic-ext-700-normal.f20e638101750dbf3814.woff2",
+    "static/media/merriweather-latin-ext-700-normal.woff2": "/static/media/merriweather-latin-ext-700-normal.841f74946038cf25cbd7.woff2",
+    "static/media/lato-latin-700-normal.woff": "/static/media/lato-latin-700-normal.1dccf99a7a009cd0c134.woff",
+    "static/media/lato-latin-400-normal.woff": "/static/media/lato-latin-400-normal.190b769c7be76a0f0dbf.woff",
+    "static/media/merriweather-latin-400-normal.woff": "/static/media/merriweather-latin-400-normal.2c455928024d0ee049d8.woff",
+    "static/media/merriweather-latin-700-normal.woff": "/static/media/merriweather-latin-700-normal.2c9e72e399e6f21bb265.woff",
+    "static/media/merriweather-cyrillic-400-normal.woff2": "/static/media/merriweather-cyrillic-400-normal.fde0b55efc50742fb57f.woff2",
+    "static/media/merriweather-latin-ext-700-normal.woff": "/static/media/merriweather-latin-ext-700-normal.105e30c96e10f9845b7d.woff",
+    "static/media/merriweather-latin-ext-400-normal.woff": "/static/media/merriweather-latin-ext-400-normal.7b1ee735b2541bc831bd.woff",
+    "static/media/merriweather-cyrillic-700-normal.woff2": "/static/media/merriweather-cyrillic-700-normal.ac43a680815dbe80c2a4.woff2",
+    "static/media/merriweather-cyrillic-ext-400-normal.woff": "/static/media/merriweather-cyrillic-ext-400-normal.7d8546944154663cc546.woff",
+    "static/media/merriweather-cyrillic-ext-700-normal.woff": "/static/media/merriweather-cyrillic-ext-700-normal.b8dde4e506ff6169cebc.woff",
+    "static/media/merriweather-cyrillic-400-normal.woff": "/static/media/merriweather-cyrillic-400-normal.2e7c71643f6e0e4c1e73.woff",
+    "static/media/merriweather-cyrillic-700-normal.woff": "/static/media/merriweather-cyrillic-700-normal.7703c01ee1126c7eb7f7.woff",
+    "static/media/merriweather-vietnamese-700-normal.woff2": "/static/media/merriweather-vietnamese-700-normal.15fc91c9001f6f8ecc20.woff2",
+    "static/media/merriweather-vietnamese-400-normal.woff2": "/static/media/merriweather-vietnamese-400-normal.1c4607f612e73642c77e.woff2",
+    "static/media/merriweather-vietnamese-400-normal.woff": "/static/media/merriweather-vietnamese-400-normal.f383714c56b2f7846379.woff",
+    "static/media/merriweather-vietnamese-700-normal.woff": "/static/media/merriweather-vietnamese-700-normal.ba3ca80b1ccc8fd765e6.woff",
+    "static/media/lato-latin-ext-400-normal.woff2": "/static/media/lato-latin-ext-400-normal.361f3dbb9db6a5980326.woff2",
+    "static/media/lato-latin-ext-700-normal.woff2": "/static/media/lato-latin-ext-700-normal.9c8812eaec45956201e1.woff2",
+    "static/media/lato-latin-ext-700-normal.woff": "/static/media/lato-latin-ext-700-normal.fa82525960f77def4b5b.woff",
+    "static/media/lato-latin-ext-400-normal.woff": "/static/media/lato-latin-ext-400-normal.221746f6ba5760746446.woff",
+    "index.html": "/index.html",
+    "main.b43f3cad.css.map": "/static/css/main.b43f3cad.css.map",
+    "main.842e573b.js.map": "/static/js/main.842e573b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b43f3cad.css",
+    "static/js/main.842e573b.js"
+  ]
+}
