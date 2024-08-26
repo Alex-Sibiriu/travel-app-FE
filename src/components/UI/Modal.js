@@ -55,6 +55,7 @@ const Modal = forwardRef(function Modal({ title, fn, image }, ref) {
 			<dialog open className="relative w-11/12 max-w-fit bg-transparent">
 				<img
 					src={`http://localhost:8000/${image}`}
+					alt="image"
 					className="max-h-screen rounded-2xl border-8 border-orange-600 overflow-hidden"
 				/>
 				<div className="absolute transition-all top-3 right-3 text-2xl cursor-pointer bg-red-600 hover:bg-red-500 px-2 rounded-md">

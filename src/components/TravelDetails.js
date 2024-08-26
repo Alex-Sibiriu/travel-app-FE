@@ -107,6 +107,7 @@ export default function TravelDetails() {
 						<img
 							className="max-h-48 inline-block ml-3 border-4 border-zinc-400 rounded-3xl shadow-zinc-800 shadow-md"
 							src={`/asset/flags/${getFlag(selectedTravel.country)}`}
+							alt={selectedTravel.country}
 							onError={(e) => {
 								e.target.onerror = null;
 								e.target.style.display = "none";

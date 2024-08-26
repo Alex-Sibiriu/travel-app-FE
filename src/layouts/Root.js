@@ -30,7 +30,7 @@ export default function RootLayout() {
 			dispatch(logout());
 			navigate("/auth?mode=login");
 
-			if (token && token != "OFFLINE") {
+			if (token && token !== "OFFLINE") {
 				try {
 					const response = await axios.post("/api/logout");
 					console.log(response.data);
@@ -63,6 +63,7 @@ export default function RootLayout() {
 						className="text-zinc-300"
 						href="https://www.freepik.com/free-vector/travel-pattern-background_3714886.htm"
 						target="_blank"
+						rel="noreferrer"
 					>
 						Image by freepik
 					</a>

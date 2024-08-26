@@ -61,7 +61,7 @@ export default function StopForm({ existingStop, handleCancel }) {
 		return () => {
 			debouncedGetAdvices.cancel();
 		};
-	}, []);
+	}, [debouncedGetAdvices]);
 
 	return (
 		<div

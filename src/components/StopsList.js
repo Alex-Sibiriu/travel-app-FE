@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { Reorder, motion, AnimatePresence } from "framer-motion";
+import { Reorder, AnimatePresence } from "framer-motion";
 import StopDetail from "./StopDetail";
 import StopCreate from "./StopCreate";
 import {
@@ -27,7 +27,7 @@ export default function StopsList() {
 	}
 
 	async function handleDragEnd(stop) {
-		if (stop.order == oldOrder.current || !navigator.onLine) {
+		if (stop.order === oldOrder.current || !navigator.onLine) {
 			return;
 		}
 

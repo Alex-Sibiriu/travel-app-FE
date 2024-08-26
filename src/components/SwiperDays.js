@@ -75,7 +75,9 @@ export default function SwiperDays({ days, selectDay, activeDay }) {
 						<SwiperSlide
 							key={`day-${index + 1}`}
 							onClick={isSubmitting ? null : () => selectDay(day)}
-							className={day.id == activeDay.id ? activeClasses : normalClasses}
+							className={
+								day.id === activeDay.id ? activeClasses : normalClasses
+							}
 						>
 							Giorno {index + 1}
 						</SwiperSlide>

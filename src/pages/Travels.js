@@ -1,11 +1,4 @@
-import {
-	Await,
-	defer,
-	json,
-	Link,
-	redirect,
-	useLoaderData,
-} from "react-router-dom";
+import { Await, defer, Link, redirect, useLoaderData } from "react-router-dom";
 import axios from "../store/axios";
 import { Suspense } from "react";
 import TravelsList from "../components/TravelsList";

@@ -35,6 +35,7 @@ export default function TravelsList({ travels }) {
 					<div className="rounded-3xl overflow-hidden border-4 border-zinc-400 bg-orange-600">
 						<img
 							src={`/asset/flags/${getFlag(travel.country)}`}
+							alt={travel.country}
 							onError={(e) => {
 								e.target.onerror = null;
 								e.target.style.display = "none";

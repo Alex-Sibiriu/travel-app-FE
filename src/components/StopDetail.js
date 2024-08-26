@@ -80,7 +80,7 @@ export default function StopDetail({ stop }) {
 		if (rating !== stop.rating) {
 			updateRating();
 		}
-	}, [rating]);
+	}, [rating, dispatch, stop]);
 
 	// Gestione della finestra
 	function handleEdit() {

@@ -139,7 +139,7 @@ export default function TomTomMap({ stop }) {
 				setMapError(true);
 			}
 		}
-	}, [stop, otherStops, mapInstance]);
+	}, [stop, otherStops, mapInstance, dayStops]);
 
 	// Funzione per ricentralizzare la mappa
 	const recenterMap = () => {

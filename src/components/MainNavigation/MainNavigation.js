@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { logout } from "../../store/auth";
 import axios from "../../store/axios";
 

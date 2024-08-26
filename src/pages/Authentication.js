@@ -33,6 +33,8 @@ export default function AuthenticationPage() {
 					<a
 						className="text-zinc-300"
 						href="https://www.freepik.com/free-vector/travel-pattern-background_3714886.htm"
+						target="_blank"
+						rel="noreferrer"
 					>
 						Image by freepik
 					</a>
@@ -72,7 +74,7 @@ export async function action({ request }) {
 		localStorage.setItem("token", token);
 		localStorage.setItem("user", user);
 		const expiration = new Date();
-		expiration.setHours(expiration.getHours() + 4);
+		expiration.setHours(expiration.getHours() + 6);
 		localStorage.setItem("expiration", expiration.toISOString());
 
 		return redirect("/");

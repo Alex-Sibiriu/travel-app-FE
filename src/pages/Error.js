@@ -23,6 +23,7 @@ function ErrorPage() {
 					className="absolute bottom-0 left-0 text-sm text-black"
 					href="https://br.freepik.com/vetores-gratis/um-homem-na-ilha-deserta-isolado_23722809.htm#fromView=search&page=1&position=46&uuid=869ac1e1-648c-4421-b9bf-21955d0e002c"
 					target="_blank"
+					rel="noreferrer"
 				>
 					Imagem de brgfx no Freepik
 				</a>

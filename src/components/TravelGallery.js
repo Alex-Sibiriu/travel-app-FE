@@ -153,13 +153,14 @@ export default function TravelGallery() {
 			)}
 
 			<div className="flex flex-wrap gap-4 justify-center pb-8">
-				{images.map((image) => (
+				{images.map((image, i) => (
 					<div
 						key={image.path}
 						className="rounded-lg bg-black border-4 border-zinc-400 overflow-hidden transition-all hover:scale-105 relative cursor-pointer"
 					>
 						<img
 							src={`https://travel-app-be-production.up.railway.app/${image.path}`}
+							alt={`image-${i}`}
 							className="h-52 min-w-52"
 							onClick={() => handleImageModal(image)}
 							onError={(e) => {
