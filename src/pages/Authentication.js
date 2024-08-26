@@ -1,4 +1,4 @@
-import { json, redirect, useNavigate } from "react-router-dom";
+import { redirect, useNavigate } from "react-router-dom";
 import AuthForm from "../components/AuthForm";
 import axios from "../store/axios";
 import HomeDescription from "../components/HomeDescription";
@@ -72,7 +72,7 @@ export async function action({ request }) {
 		localStorage.setItem("token", token);
 		localStorage.setItem("user", user);
 		const expiration = new Date();
-		expiration.setHours(expiration.getHours() + 1);
+		expiration.setHours(expiration.getHours() + 4);
 		localStorage.setItem("expiration", expiration.toISOString());
 
 		return redirect("/");

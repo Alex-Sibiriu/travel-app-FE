@@ -12,7 +12,7 @@ export default function TravelGallery() {
 	const isSubmitting = useSelector((state) => state.travel.isSubmitting);
 	const selectedTravel = useSelector((state) => state.travel.selectedTravel);
 	const [selectedImage, setSelectedImage] = useState();
-	const [errors, setErrors] = useState({}); // Stato per gestire gli errori
+	const [errors, setErrors] = useState({});
 
 	// Stato per gestire le immagini selezionate e le anteprime
 	const [selectedImages, setSelectedImages] = useState([]);
@@ -159,7 +159,7 @@ export default function TravelGallery() {
 						className="rounded-lg bg-black border-4 border-zinc-400 overflow-hidden transition-all hover:scale-105 relative cursor-pointer"
 					>
 						<img
-							src={`http://localhost:8000/${image.path}`}
+							src={`https://travel-app-be-production.up.railway.app/${image.path}`}
 							className="h-52 min-w-52"
 							onClick={() => handleImageModal(image)}
 							onError={(e) => {
