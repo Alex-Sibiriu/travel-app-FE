@@ -1,5 +1,3 @@
-// import axios from "../store/axios";
-
 import { useEffect, useState } from "react";
 import MainNavigation from "../components/MainNavigation/MainNavigation";
 
@@ -18,6 +16,7 @@ export default function RootLayout() {
 		function handleOnline() {
 			if (token === "OFFLINE") {
 				navigate("/auth?mode=login");
+
 				dispatch(logout());
 			}
 		}
@@ -26,28 +25,12 @@ export default function RootLayout() {
 			setIsOffline(!isOffline);
 		}
 
-		// async function handleLogout() {
-		// 	dispatch(logout());
-		// 	navigate("/auth?mode=login");
-
-		// 	if (token && token !== "OFFLINE") {
-		// 		try {
-		// 			const response = await axios.post("/api/logout");
-		// 			console.log(response.data);
-		// 		} catch (error) {
-		// 			console.log("Errore durante il logout: ", error);
-		// 		}
-		// 	}
-		// }
-
 		window.addEventListener("online", handleOnline);
 		window.addEventListener("offline", handleOffline);
-		// window.addEventListener("beforeunload", handleLogout);
 
 		return () => {
 			window.removeEventListener("online", handleOnline);
 			window.removeEventListener("offline", handleOffline);
-			// window.removeEventListener("beforeunload", handleLogout);
 		};
 	}, [navigate, isOffline, dispatch]);
 

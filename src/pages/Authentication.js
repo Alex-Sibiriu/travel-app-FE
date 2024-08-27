@@ -12,9 +12,9 @@ export default function AuthenticationPage() {
 			navigate("/offline");
 		}
 
-		const handleOffline = () => {
+		function handleOffline() {
 			navigate("/offline");
-		};
+		}
 
 		window.addEventListener("offline", handleOffline);
 
