@@ -1,4 +1,4 @@
-const CACHE_NAME = "appV1";
+const CACHE_NAME = "appV2";
 
 // Questo array include le risorse critiche da precacheare
 const urlsToCache = [
@@ -6,7 +6,7 @@ const urlsToCache = [
 	"/auth",
 	"/offline",
 	"/index.html",
-	"/static/js/bundle.js",
+	"/static/css/main.css",
 	"/static/js/main.chunk.js",
 	"/static/js/0.chunk.js",
 ];
