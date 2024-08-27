@@ -20,12 +20,9 @@ this.addEventListener("install", (event) => {
 });
 
 this.addEventListener("fetch", (event) => {
-	// console.log("Fetching:", event.request.url);
-
 	event.respondWith(
 		caches.match(event.request).then((response) => {
 			if (response) {
-				// console.log("Serving from cache:", event.request.url);
 				return response;
 			}
 
@@ -41,7 +38,6 @@ this.addEventListener("fetch", (event) => {
 
 					const responseToCache = networkResponse.clone();
 					caches.open(CACHE_NAME).then((cache) => {
-						// console.log("Caching new resource:", event.request.url);
 						cache.put(event.request, responseToCache);
 					});
 
