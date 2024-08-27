@@ -1,4 +1,4 @@
-export default [
+const countries = [
 	{ flag: "ad.svg", country: "Andorra" },
 	{ flag: "ae.svg", country: "Emirati Arabi Uniti" },
 	{ flag: "af.svg", country: "Afghanistan" },
@@ -245,3 +245,5 @@ export default [
 	{ flag: "zm.svg", country: "Zambia" },
 	{ flag: "zw.svg", country: "Zimbabwe" },
 ];
+
+export default countries;
