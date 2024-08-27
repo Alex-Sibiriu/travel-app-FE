@@ -1,10 +1,11 @@
-const CACHE_NAME = "appV1";
+const CACHE_NAME = "appV2";
 
 // Questo array include le risorse critiche da precacheare
 const urlsToCache = [
 	"/",
 	"/auth",
 	"/offline",
+	"/manifest.json",
 	"/index.html",
 	"/static/css/*",
 	"/static/js/*",
