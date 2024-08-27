@@ -54,7 +54,7 @@ const Modal = forwardRef(function Modal({ title, fn, image }, ref) {
 
 			<dialog open className="relative w-11/12 max-w-fit bg-transparent">
 				<img
-					src={`http://localhost:8000/${image}`}
+					src={`https://travel-app-be-production.up.railway.app/${image}`}
 					alt=""
 					className="max-h-screen rounded-2xl border-8 border-orange-600 overflow-hidden"
 				/>
