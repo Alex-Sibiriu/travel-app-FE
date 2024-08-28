@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiClient = axios.create({
-	baseURL: "https://travel-app-be-production.up.railway.app",
+	baseURL: "http://localhost:8000",
 	withCredentials: true,
 });
 

@@ -9,17 +9,27 @@ function TravelsPage() {
 	const { travels } = useLoaderData();
 
 	return (
-		<div className="text-center">
-			<h1 className="py-8 font-bold text-3xl capitalize">Elenco di viaggi</h1>
+		<div className="text-center py-8">
+			<div className="sm:w-3/4 max-w-[800px] border-8 border-orange-600 mx-auto pt-4 rounded-3xl overflow-hidden bg-gradient-to-br from-sage to-darkSage text-zinc-900 shadow-md shadow-zinc-900">
+				<h1 className="py-8 font-bold text-3xl capitalize">Elenco di viaggi</h1>
 
-			<Suspense fallback={<Loader />}>
 				<h2 className="font-bold text-xl">
 					Controlla i tuoi itinerari o inizia ad organizzare un altro viaggio!
 				</h2>
 
-				<Link to="/travel-form?mode=create" className="py-8 inline-block">
-					<ColoredBtn color="orange">+ Nuovo Viaggio</ColoredBtn>
-				</Link>
+				<Suspense fallback={<div className="pb-8"></div>}>
+					<Await resolve={travels}>
+						{!navigator.onLine && <div className="pb-8"></div>}
+						{navigator.onLine && (
+							<Link to="/travel-form?mode=create" className="py-8 inline-block">
+								<ColoredBtn color="orange">+ Nuovo Viaggio</ColoredBtn>
+							</Link>
+						)}
+					</Await>
+				</Suspense>
+			</div>
+
+			<Suspense fallback={<Loader />}>
 				<Await resolve={travels}>
 					{(loadedTravels) => <TravelsList travels={loadedTravels} />}
 				</Await>

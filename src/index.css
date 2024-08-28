@@ -54,8 +54,9 @@ p:hover .bounce {
 }
 
 .my-bg {
-  background-image: url('../public/asset/background.png');
-  background-size: contain;
+  background-image: url('../public/asset/new-bg.png');
+  background-size: cover;
+  background-position: center;
 }
 
 .bg-error {

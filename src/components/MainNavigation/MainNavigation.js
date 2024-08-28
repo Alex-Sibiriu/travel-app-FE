@@ -17,6 +17,7 @@ function MainNavigation() {
 			console.log("Errore durante il logout: ", error);
 		}
 	}
+
 	return (
 		<header className="w-full bg-orange-600 h-16 shadow-md shadow-zinc-800">
 			<nav className="h-full mx-auto container px-8">

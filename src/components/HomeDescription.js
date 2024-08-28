@@ -1,6 +1,6 @@
 function HomeDescription() {
 	return (
-		<div className="text-justify shadow-md shadow-zinc-800 h-fit font-bold bg-gradient-to-b from-orange-600 to-orange-400 p-8 rounded-2xl text-white">
+		<div className="text-justify 2xl:ml-36 shadow-md shadow-zinc-800 h-fit font-bold bg-gradient-to-b from-orange-600 to-orange-400 p-8 rounded-2xl text-white">
 			<div className="text-center pb-8">
 				<h1 className="text-3xl pb-4">Travel App</h1>
 				<p>

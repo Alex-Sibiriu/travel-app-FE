@@ -25,22 +25,12 @@ export default function AuthenticationPage() {
 
 	return (
 		<div className="my-bg flex flex-wrap items-center h-screen bg-cyan-800 overflow-auto">
-			<div className="order-2 w-full xl:h-full xl:flex lg:flex-col xl:justify-between content-center xl:w-1/2 shrink-0 p-4">
-				<div className="flex-grow flex items-center justify-center">
+			<div className="order-2 w-full xl:h-full xl:flex lg:flex-col xl:justify-between content-center xl:w-3/5 shrink-0 p-4">
+				<div className="flex-grow flex items-center justify-center lg:justify-self-end">
 					<HomeDescription />
 				</div>
-				<div className="p-4">
-					<a
-						className="text-zinc-300"
-						href="https://www.freepik.com/free-vector/travel-pattern-background_3714886.htm"
-						target="_blank"
-						rel="noreferrer"
-					>
-						Image by freepik
-					</a>
-				</div>
 			</div>
-			<div className="w-full xl:w-1/2 shrink-0 p-4 order-1 xl:order-3">
+			<div className="w-full xl:w-2/5 shrink-0 p-4 order-1 xl:order-3">
 				<AuthForm />
 			</div>
 		</div>

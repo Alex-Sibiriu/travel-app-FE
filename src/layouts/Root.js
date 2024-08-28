@@ -41,16 +41,6 @@ export default function RootLayout() {
 				<div className="flex-grow">
 					<Outlet key={isOffline} />
 				</div>
-				<div className="p-4">
-					<a
-						className="text-zinc-300"
-						href="https://www.freepik.com/free-vector/travel-pattern-background_3714886.htm"
-						target="_blank"
-						rel="noreferrer"
-					>
-						Image by freepik
-					</a>
-				</div>
 			</main>
 		</div>
 	);

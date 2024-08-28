@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.b43f3cad.css",
-    "main.js": "/static/js/main.df874194.js",
+    "main.css": "/static/css/main.60fa7f38.css",
+    "main.js": "/static/js/main.2d2f61be.js",
+    "static/media/new-bg.png": "/static/media/new-bg.77731b6f2e1eaed2e462.png",
     "static/media/bg-error.jpg": "/static/media/bg-error.575f778fa5991c949daf.jpg",
-    "static/media/background.png": "/static/media/background.5ae9b02f3ce6abbbe94e.png",
     "static/media/lato-latin-400-normal.woff2": "/static/media/lato-latin-400-normal.be36596da218e1eec01c.woff2",
     "static/media/lato-latin-700-normal.woff2": "/static/media/lato-latin-700-normal.8f28e0e1fdb195149f1c.woff2",
     "static/media/merriweather-latin-400-normal.woff2": "/static/media/merriweather-latin-400-normal.e009f21405b4d7e89367.woff2",
@@ -33,11 +33,11 @@
     "static/media/lato-latin-ext-700-normal.woff": "/static/media/lato-latin-ext-700-normal.fa82525960f77def4b5b.woff",
     "static/media/lato-latin-ext-400-normal.woff": "/static/media/lato-latin-ext-400-normal.221746f6ba5760746446.woff",
     "index.html": "/index.html",
-    "main.b43f3cad.css.map": "/static/css/main.b43f3cad.css.map",
-    "main.df874194.js.map": "/static/js/main.df874194.js.map"
+    "main.60fa7f38.css.map": "/static/css/main.60fa7f38.css.map",
+    "main.2d2f61be.js.map": "/static/js/main.2d2f61be.js.map"
   },
   "entrypoints": [
-    "static/css/main.b43f3cad.css",
-    "static/js/main.df874194.js"
+    "static/css/main.60fa7f38.css",
+    "static/js/main.2d2f61be.js"
   ]
 }
