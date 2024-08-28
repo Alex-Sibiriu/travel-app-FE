@@ -25,10 +25,8 @@ export default function AuthenticationPage() {
 
 	return (
 		<div className="my-bg flex flex-wrap items-center h-screen bg-cyan-800 overflow-auto">
-			<div className="order-2 w-full xl:h-full xl:flex lg:flex-col xl:justify-between content-center xl:w-3/5 shrink-0 p-4">
-				<div className="flex-grow flex items-center justify-center lg:justify-self-end">
-					<HomeDescription />
-				</div>
+			<div className="order-2 w-full xl:h-full lg:flex lg:justify-center lg:items-center content-center xl:w-3/5 shrink-0 p-4">
+				<HomeDescription />
 			</div>
 			<div className="w-full xl:w-2/5 shrink-0 p-4 order-1 xl:order-3">
 				<AuthForm />

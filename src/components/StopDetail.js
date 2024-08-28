@@ -190,9 +190,11 @@ export default function StopDetail({ stop }) {
 				fn={handleDelete}
 			/>
 			<div
-				className={`transition-all duration-1000 border-2 rounded-3xl text-start overflow-hidden border-orange-600 text-zinc-900 bg-sage bg-gradient-to-t from-darkSage to-sage ${
-					isExpanded && !isEdit ? "pt-4" : "pt-0"
-				}`}
+				className={`transition-all duration-1000 border-2 rounded-3xl text-start overflow-hidden border-orange-600 text-zinc-900 bg-gradient-to-t ${
+					stop.is_visited
+						? "from-green-700 to-green-500 "
+						: "from-darkSage to-sage "
+				} ${isExpanded && !isEdit ? "pt-4" : "pt-0"}`}
 				key={stop.slug}
 			>
 				<div
@@ -310,11 +312,15 @@ export default function StopDetail({ stop }) {
 				</Form>
 
 				<div
-					className={
+					className={`${
 						!isExpanded
-							? `cursor-grab px-4 hover:bg-gradient-to-r from-sage via-darkSage to-sage`
+							? `cursor-grab px-4 hover:bg-gradient-to-r ${
+									stop.is_visited
+										? "from-green-500 via-green-700 to-green-500"
+										: "from-sage via-darkSage to-sage"
+							  } `
 							: ""
-					}
+					}`}
 				>
 					<p
 						onClick={handleExpand}
