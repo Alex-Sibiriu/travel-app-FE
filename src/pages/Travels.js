@@ -10,7 +10,7 @@ function TravelsPage() {
 
 	return (
 		<div className="text-center py-8">
-			<div className="sm:w-3/4 max-w-[800px] border-8 border-orange-600 mx-auto pt-4 rounded-3xl overflow-hidden bg-gradient-to-br from-sage to-darkSage text-zinc-900 shadow-md shadow-zinc-900">
+			<div className="w-11/12 sm:w-3/4 max-w-[800px] border-8 border-orange-600 mx-auto pt-4 rounded-3xl overflow-hidden bg-gradient-to-br from-sage to-darkSage text-zinc-900 shadow-md shadow-zinc-900">
 				<h1 className="py-8 font-bold text-3xl capitalize">Elenco di viaggi</h1>
 
 				<h2 className="font-bold text-xl">

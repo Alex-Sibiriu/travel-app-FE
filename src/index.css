@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "@fontsource/merriweather"; /* Peso normale, variante normale */
-@import "@fontsource/merriweather/700.css"; /* Peso bold */
-@import "@fontsource/lato"; /* Peso normale, variante normale */
-@import "@fontsource/lato/700.css"; /* Peso bold */
+@import "@fontsource/merriweather";
+@import "@fontsource/merriweather/700.css";
+@import "@fontsource/lato";
+@import "@fontsource/lato/700.css"; 
 
 
 * {
