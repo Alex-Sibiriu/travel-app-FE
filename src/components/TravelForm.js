@@ -7,9 +7,11 @@ import {
 
 import countries from "../utilities/countriesList";
 import ColoredBtn from "./UI/ColoredBtn";
+import { useState } from "react";
 
 export default function TravelForm() {
 	const travel = JSON.parse(localStorage.getItem("selectedTravel"));
+	const errors = JSON.parse(localStorage.getItem("errors")) || {};
 	const navigate = useNavigate();
 
 	const navigation = useNavigation();
@@ -21,12 +23,40 @@ export default function TravelForm() {
 	const user = localStorage.getItem("user");
 	const userId = JSON.parse(user).id;
 
+	const today = new Date().toISOString().split("T")[0];
+
+	const [endDateMin, setEndDateMin] = useState(
+		isEdit ? travel?.starting_date : new Date().toISOString().split("T")[0]
+	);
+
+	const [startDateMax, setStartDateMax] = useState(
+		isEdit ? travel?.ending_date : new Date().toISOString().split("T")[0]
+	);
+
+	function handleStartDateChange(event) {
+		const selectedStartDate = event.target.value;
+		setEndDateMin(selectedStartDate);
+	}
+
+	function handleEndDateChange(event) {
+		const selectedEndDate = event.target.value;
+		setStartDateMax(selectedEndDate);
+	}
+
 	return (
 		<div className="w-11/12 max-w-[800px] shadow-lg py-8 mt-8 mx-auto font-bold text-orange-100 bg-gradient-to-b from-orange-600 to-orange-400 rounded-xl text-center">
 			<Form method="POST" className="flex flex-wrap px-8 sm:px-16">
 				<h1 className="text-3xl w-full capitalize text-center">
 					{isEdit ? "Modifica" : "Crea"} Viaggio
 				</h1>
+
+				{Object.keys(errors).map((key) => (
+					<div key={key} className="text-red-700 text-center my-4">
+						{errors[key].map((error, index) => (
+							<p key={index}>{error}</p>
+						))}
+					</div>
+				))}
 
 				<input name="user_id" type="hidden" required value={userId} />
 
@@ -56,6 +86,9 @@ export default function TravelForm() {
 						type="date"
 						className="bg-orange-300 px-2 py-1 text-white rounded-lg focus:outline-orange-600"
 						defaultValue={isEdit ? travel?.starting_date : ""}
+						min={today}
+						max={startDateMax}
+						onChange={handleStartDateChange}
 						required
 					/>
 				</div>
@@ -70,6 +103,8 @@ export default function TravelForm() {
 						type="date"
 						className="bg-orange-300 px-2 py-1 text-white rounded-lg"
 						defaultValue={isEdit ? travel?.ending_date : ""}
+						min={endDateMin}
+						onChange={handleEndDateChange}
 						required
 					/>
 				</div>

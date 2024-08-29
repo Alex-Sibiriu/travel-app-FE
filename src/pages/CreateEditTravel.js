@@ -8,11 +8,12 @@ export default function CreateEditTravelPage({ travel }) {
 }
 
 export async function action({ request }) {
+	localStorage.removeItem("errors");
 	const searchParams = new URL(request.url).searchParams;
 	const mode = searchParams.get("mode");
 
 	if (mode !== "edit" && mode !== "create") {
-		throw json({ message: "Modalità non supportate" }, { status: 422 });
+		throw json({ message: "Modalità non supportata" }, { status: 422 });
 	}
 
 	const data = await request.formData();
@@ -46,16 +47,22 @@ export async function action({ request }) {
 				return redirect(`/travel/${slug}`);
 			}
 			return redirect("/");
-		} else {
-			throw json(
-				{ message: resData.message || "Operazione fallita" },
-				{ status: 400 }
-			);
 		}
 	} catch (error) {
-		throw json(
-			{ message: error.message || "Si è verificato un errore" },
-			{ status: 500 }
-		);
+		if (error.response && error.response.data.errors) {
+			localStorage.setItem(
+				"errors",
+				JSON.stringify(error.response.data.errors)
+			);
+		} else {
+			localStorage.setItem(
+				"errors",
+				JSON.stringify({
+					err: ["Si è verificato un errore " + error.message],
+				})
+			);
+		}
+
+		return redirect(`/travel-form?mode=${mode}`);
 	}
 }

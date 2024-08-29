@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { redirect } from "react-router-dom";
 
 const initialAuthState = {
 	isAuthenticated: false,
@@ -16,6 +17,7 @@ const authSlice = createSlice({
 			state.isAuthenticated = false;
 			localStorage.removeItem("token");
 			localStorage.removeItem("expiration");
+			return redirect("/auth?mode=login");
 		},
 	},
 });

@@ -11,7 +11,6 @@ function MainNavigation() {
 	async function handleLogout() {
 		try {
 			const response = await axios.post("/api/logout");
-			console.log(response.data);
 			dispatch(logout());
 		} catch (error) {
 			console.log("Errore durante il logout: ", error);
