@@ -26,11 +26,11 @@ export default function TravelForm() {
 	const today = new Date().toISOString().split("T")[0];
 
 	const [endDateMin, setEndDateMin] = useState(
-		isEdit ? travel?.starting_date : new Date().toISOString().split("T")[0]
+		isEdit ? travel?.starting_date : today
 	);
 
 	const [startDateMax, setStartDateMax] = useState(
-		isEdit ? travel?.ending_date : new Date().toISOString().split("T")[0]
+		isEdit ? travel?.ending_date : null
 	);
 
 	function handleStartDateChange(event) {
