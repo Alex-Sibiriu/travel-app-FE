@@ -5,7 +5,7 @@ import InputAuth from "./UI/InputAuth";
 export default function AuthForm() {
 	const [searchParams] = useSearchParams();
 	const isLogin = searchParams.get("mode") === "login";
-	const SessionExpired = searchParams.get("message");
+	const message = searchParams.get("message");
 
 	const navigation = useNavigation();
 	const isSubmitting = navigation.state === "submitting";
@@ -17,9 +17,7 @@ export default function AuthForm() {
 					{isLogin ? "Accedi" : "Registrati"}
 				</h2>
 
-				{SessionExpired && (
-					<h3 className="py-4 text-red-800">{SessionExpired}</h3>
-				)}
+				{message && <h3 className="py-4 text-red-800">{message}</h3>}
 
 				{!isLogin && (
 					<div className="py-4 w-4/5 mx-auto">
@@ -31,15 +29,22 @@ export default function AuthForm() {
 				</div>
 
 				<div className="py-4 w-4/5 mx-auto">
-					<InputAuth label="Password" id="password" type="password" required />
+					<InputAuth
+						label="Password (minimo 8 caratteri)"
+						id="password"
+						type="password"
+						minLength={8}
+						required
+					/>
 				</div>
 
 				{!isLogin && (
-					<div className="py-4 w-4/5 mx-auto flex content-center justify-center">
+					<div className="py-4 w-4/5 mx-auto">
 						<InputAuth
 							label="Conferma Password"
 							id="password_confirmation"
 							type="password"
+							minLength={8}
 							required
 						/>
 					</div>

@@ -243,7 +243,7 @@ export default function StopDetail({ stop }) {
 							}`}
 						>
 							<strong>Valuta questa tappa</strong>
-							<div className="text-pink-500 text-xl pt-1">
+							<div className="text-yellow-500 text-xl pt-1">
 								{starRating.map((star, index) => (
 									<FontAwesomeIcon
 										key={star.point}
@@ -269,7 +269,7 @@ export default function StopDetail({ stop }) {
 										color={"orange"}
 										onClick={handleEdit}
 									>
-										Modifica <FontAwesomeIcon icon={faPencil} />
+										<FontAwesomeIcon icon={faPencil} />
 									</ColoredBtn>
 								)}
 								<ColoredBtn
@@ -277,7 +277,7 @@ export default function StopDetail({ stop }) {
 									color={"red"}
 									onClick={() => modal.current.open()}
 								>
-									Cancella <FontAwesomeIcon icon={faTrashCan} />
+									<FontAwesomeIcon icon={faTrashCan} />
 								</ColoredBtn>
 							</div>
 						)}

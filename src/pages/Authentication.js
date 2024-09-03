@@ -51,6 +51,15 @@ export async function action({ request }) {
 		password_confirmation: data.get("password_confirmation") || null,
 	};
 
+	if (
+		authData.password_confirmation &&
+		authData.password !== authData.password_confirmation
+	) {
+		return redirect(
+			"/auth?mode=register&message=Le%20password%20non%20corrispondono"
+		);
+	}
+
 	try {
 		const response = await axios.post(`/api/${mode}`, authData);
 
