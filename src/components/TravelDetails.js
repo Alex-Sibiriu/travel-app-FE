@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setActiveDay, deleteTravel } from "../store/travelSlice";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPencil } from "@fortawesome/free-solid-svg-icons";
+import { faPencil, faTrashCan } from "@fortawesome/free-solid-svg-icons";
 
 import countries from "../utilities/countriesList";
 import SwiperDays from "./SwiperDays";
@@ -147,7 +147,7 @@ export default function TravelDetails() {
 							onClick={() => modal.current.open()}
 							color={"red"}
 						>
-							Elimina Viaggio
+							Elimina Viaggio <FontAwesomeIcon icon={faTrashCan} />
 						</ColoredBtn>
 					</div>
 				)}

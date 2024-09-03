@@ -1,6 +1,6 @@
 export default function ColoredBtn({ color, disabled, children, ...props }) {
 	let baseClasses =
-		"px-6 py-3 font-bold rounded-md text-lg transition-all border-2";
+		"px-5 py-3 font-bold rounded-md text-lg transition-all border-2";
 	let bgClass,
 		borderClass,
 		textClass,
