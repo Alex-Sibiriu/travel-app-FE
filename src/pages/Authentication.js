@@ -78,6 +78,10 @@ export async function action({ request }) {
 	} catch (error) {
 		console.log(error);
 
-		return redirect(`/auth?mode=${mode}&message=${error.message}`);
+		return redirect(
+			`/auth?mode=${mode}&message=${
+				error.response?.data?.message || error.message
+			}`
+		);
 	}
 }
