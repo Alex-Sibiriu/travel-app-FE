@@ -10,7 +10,7 @@ import SwiperDays from "./SwiperDays";
 import StopsList from "./StopsList";
 import ColoredBtn from "./UI/ColoredBtn";
 import axios from "../store/axios";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Modal from "./UI/Modal";
 import { setIsSubmitting } from "../store/travelSlice";
 import TravelGallery from "./TravelGallery";
@@ -37,9 +37,13 @@ export default function TravelDetails() {
 
 	const modal = useRef();
 
+	useEffect(() => {
+		if (!selectedTravel) {
+			navigate("/");
+		}
+	}, [selectedTravel, navigate]);
+
 	if (!selectedTravel) {
-		// Se selectedTravel è null, reindirizza alla home
-		navigate("/");
 		return null;
 	}
 
@@ -79,7 +83,6 @@ export default function TravelDetails() {
 			);
 
 			if (response.data.success) {
-				navigate("/");
 				dispatch(deleteTravel());
 			} else {
 				throw new Error(response.data.message || "Operazione fallita");
@@ -88,6 +91,11 @@ export default function TravelDetails() {
 			console.error("Si è verificato un errore", error);
 		}
 		dispatch(setIsSubmitting(false));
+
+		if (!selectedTravel) {
+			// Se selectedTravel è null, reindirizza alla home
+			navigate("/");
+		}
 	}
 
 	return (

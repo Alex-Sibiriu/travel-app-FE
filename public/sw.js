@@ -1,4 +1,4 @@
-const CACHE_NAME = "appV10";
+const CACHE_NAME = "appV11";
 
 // Questo array include le risorse critiche da precacheare
 const urlsToCache = ["/", "/auth", "/offline", "/index.html"];
@@ -16,11 +16,15 @@ this.addEventListener("fetch", (event) => {
 	event.respondWith(
 		caches.match(event.request).then((response) => {
 			if (response) {
-				return response;
+				return response; // Risposta dalla cache
 			}
 
-			return fetch(event.request)
-				.then((networkResponse) => {
+			// Controlla se l'URL ha uno schema valido
+			if (
+				event.request.url.startsWith("http://") ||
+				event.request.url.startsWith("https://")
+			) {
+				return fetch(event.request).then((networkResponse) => {
 					if (
 						!networkResponse ||
 						networkResponse.status !== 200 ||
@@ -35,10 +39,10 @@ this.addEventListener("fetch", (event) => {
 					});
 
 					return networkResponse;
-				})
-				.catch((error) => {
-					console.error("Fetch failed:", error);
 				});
+			}
+			// Se non è uno schema valido, non fare nulla
+			return fetch(event.request);
 		})
 	);
 });
