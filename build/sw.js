@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 const CACHE_NAME = "appV9";
+=======
+const CACHE_NAME = "appV8";
+>>>>>>> cd0dbb57e84947b594acf948385c8fcf09201032
 
 // Questo array include le risorse critiche da precacheare
 const urlsToCache = ["/", "/auth", "/offline", "/index.html"];
