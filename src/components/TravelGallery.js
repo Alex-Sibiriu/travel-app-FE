@@ -220,7 +220,7 @@ export default function TravelGallery() {
 								src={preview}
 								loading="lazy"
 								alt={`Anteprima ${index}`}
-								className="w-32 h-32 object-cover m-2 border-2 border-zinc-400 rounded-md"
+								className="h-52 min-w-52 object-cover m-2 border-2 border-zinc-400 rounded-md"
 							/>
 						))}
 					</div>
