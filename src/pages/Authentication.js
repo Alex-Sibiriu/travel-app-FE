@@ -76,8 +76,8 @@ export async function action({ request }) {
 
 		return redirect("/");
 	} catch (error) {
-		console.log(error.message);
+		console.log(error);
 
-		return redirect(`/auth?mode=login&message=${error.message}`);
+		return redirect(`/auth?mode=${mode}&message=${error.message}`);
 	}
 }
