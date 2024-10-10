@@ -1,4 +1,4 @@
-const CACHE_NAME = "appV9";
+const CACHE_NAME = "appV10";
 
 // Questo array include le risorse critiche da precacheare
 const urlsToCache = ["/", "/auth", "/offline", "/index.html"];
