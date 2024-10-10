@@ -76,12 +76,23 @@ export async function action({ request }) {
 
 		return redirect("/");
 	} catch (error) {
-		console.log(error);
+		if (error.response && error.response.status === 422) {
+			// Recupero gli errori di validazione dal backend
+			const validationErrors = error.response.data.errors;
+			let errorMessage = "";
 
-		return redirect(
-			`/auth?mode=${mode}&message=${
-				error.response?.data?.message || error.message
-			}`
-		);
+			// Creo un messaggio da tutti gli errori
+			for (const key in validationErrors) {
+				if (validationErrors[key]) {
+					errorMessage += `${validationErrors[key].join(", ")} `;
+				}
+			}
+
+			return redirect(
+				`/auth?mode=${mode}&message=${encodeURIComponent(errorMessage.trim())}`
+			);
+		}
+
+		return redirect(`/auth?mode=${mode}&message=${error.message}`);
 	}
 }
